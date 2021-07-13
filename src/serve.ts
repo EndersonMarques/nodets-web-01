@@ -18,7 +18,7 @@ serve.use(express.static(path.join(__dirname, '../public')));
 serve.use(mainRoutes);
 
 serve.use((req, res)=>{
-    res.send('pagina não encontrada');
+    res.render('pages/404');
 });
 
 serve.listen(process.env.PORT);
